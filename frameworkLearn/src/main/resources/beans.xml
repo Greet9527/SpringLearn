@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="org.grit.container.xmlBeans.User">
+
+<!--        <property name="age" value="22"></property>-->
+<!--        <property name="high" value="178.1"></property>-->
+<!--        <property name="name" value="daodao"></property>-->
+<!--        <property name="weight" value="160.4"></property>-->
+
+        <constructor-arg index="0" name="name" value="qiangqiang"/>
+        <constructor-arg index="1" name="age" value="20"/>
+        <constructor-arg index="2" name="high" value="150"/>
+        <constructor-arg index="3" name="weight" value="170"/>
+    </bean>
+
+    <bean id="student" class="org.grit.container.xmlBeans.Student">
+        <!--  基于构造器注入  -->
+<!--        <constructor-arg ref="user"></constructor-arg>-->
+        <!--基于setter注入-->
+        <property name="user">
+            <ref bean="user"/>
+        </property>
+        <property name="classNo" value="1"></property>
+        <property name="gradeNo" value="2"></property>
+        <property name="number" value="20200202"></property>
+    </bean>
+    <alias name="user" alias="user2"></alias>
+
+    <bean class="org.grit.container.xmlBeans.InstantiationTracingBeanPostProcessor"></bean>
+</beans>
