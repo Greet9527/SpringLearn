@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 @ComponentScan(basePackages = "org.grit.container")
-public class AnnotationAppCfg {
+public class AnnotationScanAppCfg {
     //Bean注解
 //    @Bean(initMethod = "init",destroyMethod = "destory")
 //    @Scope("prototype")
