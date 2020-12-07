@@ -1,6 +1,5 @@
 package org.grit.container.annotationBeans;
 
-import org.grit.container.xmlBeans.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
