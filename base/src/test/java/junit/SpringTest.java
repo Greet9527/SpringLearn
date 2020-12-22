@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
-public class SpringTest extends BaseTest{
+public class SpringTest{
     @Autowired
     private Person person;
 

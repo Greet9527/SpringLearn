@@ -16,8 +16,4 @@ public class AnnotationImportSelector implements ImportSelector {
         return strings.toArray(String[]::new);
     }
 
-    @Override
-    public Predicate<String> getExclusionFilter() {
-        return null;
-    }
 }
